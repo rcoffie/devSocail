@@ -5,4 +5,4 @@ from projects.models import Project, Tag, Review
 
 def list_projects(request):
 
-    return render(request 'projects/list_projects.html')
+    return render(request,'projects/list_projects.html')
