@@ -3,8 +3,10 @@
 {% block content %}
 <div class="container">
   <div class="row">
-    <div class="col-md-8">
+  <div class="col-md-8">
 
+
+<a href="{% url 'create_project' %}" class="btn btn-dark">Create Project</a>
   <table class="table">
   <thead>
     <tr>
@@ -22,7 +24,9 @@
       <td>{{each.demo_link}}</td>
       <td>
 
-       <button type="button" class="btn btn-light">Edit</button>
+
+       <a class="btn btn-light text-decoration-none" href="{% url 'edit_project' each.id %}"> edit </a>
+       <a class="btn btn-light text-decoration-none text-danger" onclick="return confirm('Are you sure?')" href="{% url 'delete_project' each.id %}"> Delete </a>
       </td>
     </tr>
     {% endfor %}

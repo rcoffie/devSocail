@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+  <div class="card" >
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{project_detail.title}}</h5>
+    <p class="card-text">{{project_detail.description}}</p>
+    <p>
+      {% for each in tags %}
+    <span class="bg-secondary text-white m-1 p-1 rounded"> {{each.name}} </span>
+    {% endfor %}
+    </p>
+  </div>
+  <!-- <ul class="list-group list-group-flush">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+  </ul> -->
+  <div class="card-body">
+    {% if poroject_detail.demo_link %}
+    <a href="{{project_detail.demo_link}}" class="card-link">demo_link</a>
+    {% endif %}
+    {% if project_detail.source_link %}
+    <a href="{{project_detail.source_link}}" class="card-link">source_link</a>
+    {% endif %}
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
