@@ -1,7 +1,8 @@
-from django.test import TestCase
-
-from projects.models import Project, Review, Tag
 from datetime import datetime
+
+from django.test import TestCase
+from projects.models import Project, Review, Tag
+
 
 class TestProjectModel(TestCase):
     def setUp(self):

@@ -1,5 +1,7 @@
-from django.urls import path, include
-from projects.views import (list_projects, project_detail, create_project, edit_project, delete_project)
+from django.urls import include, path
+
+from projects.views import (create_project, delete_project, edit_project,
+                            list_projects, project_detail)
 
 urlpatterns = [
     path("list-projects/",list_projects,name="list_projects"),
