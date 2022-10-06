@@ -1,6 +1,8 @@
-from django.shortcuts import render, redirect
-from projects.models import Project, Tag, Review
+from django.shortcuts import redirect, render
+
 from projects.forms import ProjectForm
+from projects.models import Project, Review, Tag
+
 # Create your views here.
 
 
